@@ -7,6 +7,8 @@ public class Main {
 
         String[] words = FileHangling.fileReading();
 
+        Game.game(words);
+
         FileHangling.writingWordFiel(words);
 
     }

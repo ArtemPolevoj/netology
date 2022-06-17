@@ -5,16 +5,14 @@ import java.util.Scanner;
 
 class FileHangling {
 
-    File directory = new File("WordSafe");
-    static File file = new File("WordSafe/wordsafe.txt");
+    private final File directory = new File("WordSafe");
+    private static final File file = new File("WordSafe/wordsafe.txt");
 
 
     public static void writingWordFiel(String[] words) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println(Arrays.toString(words));
-            String word = words[(int) (Math.random() * words.length)];
-            System.out.println("Случайное слово: " + word);
+
             System.out.print("Добавьте слово: ");
             String inWorrd = scanner.nextLine().toLowerCase(Locale.ROOT);
             if (Arrays.asList(words).contains(inWorrd)) System.out.println("Есть такое слово.");
